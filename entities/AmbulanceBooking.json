@@ -1,0 +1,59 @@
+{
+  "name": "AmbulanceBooking",
+  "type": "object",
+  "properties": {
+    "patient_email": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "ambulance_id": {
+      "type": "string"
+    },
+    "ambulance_type": {
+      "type": "string",
+      "enum": [
+        "BLS",
+        "ALS"
+      ]
+    },
+    "vehicle_number": {
+      "type": "string"
+    },
+    "pickup_latitude": {
+      "type": "number"
+    },
+    "pickup_longitude": {
+      "type": "number"
+    },
+    "destination_hospital_id": {
+      "type": "string"
+    },
+    "destination_hospital_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Requested",
+        "Dispatched",
+        "In Transit",
+        "Arrived",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Requested"
+    },
+    "estimated_eta_minutes": {
+      "type": "number"
+    },
+    "distance_km": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "patient_email",
+    "ambulance_id"
+  ]
+}
