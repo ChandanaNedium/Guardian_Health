@@ -1,0 +1,68 @@
+{
+  "name": "BedBooking",
+  "type": "object",
+  "properties": {
+    "patient_name": {
+      "type": "string"
+    },
+    "patient_email": {
+      "type": "string"
+    },
+    "patient_phone": {
+      "type": "string"
+    },
+    "hospital_id": {
+      "type": "string",
+      "description": "Reference to Hospital"
+    },
+    "hospital_name": {
+      "type": "string"
+    },
+    "condition_type": {
+      "type": "string",
+      "enum": [
+        "Emergency",
+        "Serious",
+        "Normal"
+      ]
+    },
+    "bed_type": {
+      "type": "string",
+      "enum": [
+        "ICU",
+        "General",
+        "Emergency",
+        "Ventilator"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Rejected",
+        "Discharged"
+      ],
+      "default": "Pending"
+    },
+    "priority": {
+      "type": "number",
+      "default": 0
+    },
+    "patient_latitude": {
+      "type": "number"
+    },
+    "patient_longitude": {
+      "type": "number"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "patient_name",
+    "hospital_id",
+    "condition_type",
+    "bed_type"
+  ]
+}
