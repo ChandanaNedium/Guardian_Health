@@ -1,0 +1,50 @@
+{
+  "name": "DischargeRecord",
+  "type": "object",
+  "properties": {
+    "patient_name": {
+      "type": "string"
+    },
+    "patient_email": {
+      "type": "string"
+    },
+    "hospital_id": {
+      "type": "string"
+    },
+    "hospital_name": {
+      "type": "string"
+    },
+    "bed_type": {
+      "type": "string",
+      "enum": [
+        "ICU",
+        "General",
+        "Emergency",
+        "Ventilator"
+      ]
+    },
+    "condition_type": {
+      "type": "string",
+      "enum": [
+        "Emergency",
+        "Serious",
+        "Normal"
+      ]
+    },
+    "admitted_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "discharged_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "booking_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "patient_name",
+    "hospital_id"
+  ]
+}
