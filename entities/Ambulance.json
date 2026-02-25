@@ -1,0 +1,54 @@
+{
+  "name": "Ambulance",
+  "type": "object",
+  "properties": {
+    "vehicle_number": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "BLS",
+        "ALS"
+      ],
+      "description": "Basic Life Support or Advanced Life Support"
+    },
+    "city": {
+      "type": "string",
+      "enum": [
+        "Hyderabad",
+        "Bangalore",
+        "Chennai",
+        "Mumbai",
+        "Delhi"
+      ]
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "is_available": {
+      "type": "boolean",
+      "default": true
+    },
+    "driver_name": {
+      "type": "string"
+    },
+    "driver_phone": {
+      "type": "string"
+    },
+    "hospital_id": {
+      "type": "string",
+      "description": "Associated hospital"
+    }
+  },
+  "required": [
+    "vehicle_number",
+    "type",
+    "city",
+    "latitude",
+    "longitude"
+  ]
+}
