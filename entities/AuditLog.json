@@ -1,0 +1,33 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "admin_email": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "bed_update",
+        "booking_approved",
+        "booking_rejected",
+        "patient_discharged",
+        "ambulance_dispatched"
+      ]
+    },
+    "details": {
+      "type": "string"
+    },
+    "hospital_id": {
+      "type": "string"
+    },
+    "related_id": {
+      "type": "string",
+      "description": "ID of related entity (booking, patient, etc.)"
+    }
+  },
+  "required": [
+    "admin_email",
+    "action"
+  ]
+}
