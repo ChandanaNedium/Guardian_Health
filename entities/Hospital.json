@@ -1,0 +1,86 @@
+{
+  "name": "Hospital",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Hospital name"
+    },
+    "city": {
+      "type": "string",
+      "enum": [
+        "Hyderabad",
+        "Bangalore",
+        "Chennai",
+        "Mumbai",
+        "Delhi"
+      ]
+    },
+    "address": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Rating out of 5"
+    },
+    "total_reviews": {
+      "type": "number"
+    },
+    "icu_beds_total": {
+      "type": "number"
+    },
+    "icu_beds_available": {
+      "type": "number"
+    },
+    "general_beds_total": {
+      "type": "number"
+    },
+    "general_beds_available": {
+      "type": "number"
+    },
+    "emergency_beds_total": {
+      "type": "number"
+    },
+    "emergency_beds_available": {
+      "type": "number"
+    },
+    "ventilator_beds_total": {
+      "type": "number"
+    },
+    "ventilator_beds_available": {
+      "type": "number"
+    },
+    "icu_load_prediction": {
+      "type": "string",
+      "enum": [
+        "safe",
+        "medium",
+        "high"
+      ],
+      "default": "safe"
+    },
+    "admin_email": {
+      "type": "string",
+      "description": "Email of the admin managing this hospital"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "city",
+    "latitude",
+    "longitude"
+  ]
+}
